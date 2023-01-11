@@ -21,5 +21,6 @@ public class PlayerController : MonoBehaviour
     {
         //movement
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+
     }
 }
