@@ -9,6 +9,10 @@ public class PlayerAttack : MonoBehaviour
     private float timeToAttack = 0.25f;
     private float timer = 0f;
 
+    //public Transform attackLocation;
+    //public float attackRange = -0.5f;
+    //public LayerMask enemies;
+
     private void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
@@ -40,4 +44,5 @@ public class PlayerAttack : MonoBehaviour
         attacking = true;
         attackArea.SetActive(attacking);
     }
+   
 }
