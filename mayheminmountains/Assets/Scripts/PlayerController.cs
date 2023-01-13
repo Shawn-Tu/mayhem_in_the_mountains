@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour
             FlipY();
         }
 
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            FlipYUp();
+        }
+
     }
 
     //flips character, moves sword hitbox left or right
@@ -76,5 +81,10 @@ public class PlayerController : MonoBehaviour
 
         flippedY = !flippedY;
     }
-    
+    //just makes it go up...
+    void FlipYUp()
+    {
+        attackArea.transform.localPosition = new Vector2(0, 0.5f);
+    }
+
 }
