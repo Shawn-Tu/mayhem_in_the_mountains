@@ -52,10 +52,6 @@ public class PlayerController : MonoBehaviour
             FlipY();
         }
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            FlipYUp();
-        }
 
     }
 
@@ -80,11 +76,6 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         flippedY = !flippedY;
-    }
-    //just makes it go up...
-    void FlipYUp()
-    {
-        attackArea.transform.localPosition = new Vector2(0, 0.5f);
     }
 
 }
