@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,8 +33,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+
         //movement
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+
+
 
         //calls flip function
         if (movement.x > 0 && !flippedX)
@@ -54,6 +59,7 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
 
     //flips character, moves sword hitbox left or right
     void FlipX()
