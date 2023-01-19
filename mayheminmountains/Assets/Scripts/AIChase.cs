@@ -8,8 +8,6 @@ public class AIChase : MonoBehaviour
     public float speed;
     public float distanceBT;
 
-
-
     private float distance;
     // Start is called before the first frame update
     void Start()
@@ -20,12 +18,12 @@ public class AIChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks distance between player and enemy
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
+        
 
-        //transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
-        if(distance < distanceBT)
+        if (distance < distanceBT)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         }
