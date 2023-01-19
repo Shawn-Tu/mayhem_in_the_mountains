@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Roaming : MonoBehaviour
@@ -8,14 +9,13 @@ public class Roaming : MonoBehaviour
     [SerializeField]float range;
     [SerializeField] float maxDistance;
 
-    GameObject ai;
-
     Vector2 wayPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         SetNewDistination();
+        
     }
 
     // Update is called once per frame
