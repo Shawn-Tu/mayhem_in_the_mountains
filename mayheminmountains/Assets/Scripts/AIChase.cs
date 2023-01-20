@@ -30,7 +30,6 @@ public class AIChase : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         
-
         if (distance < distanceBT)
         {
             chase();
