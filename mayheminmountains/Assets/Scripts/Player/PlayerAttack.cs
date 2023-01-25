@@ -21,20 +21,23 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!PauseMenu.isPaused)
         {
-            Attack();
-        }
-
-        if (attacking)
-        {
-            timer += Time.deltaTime;
-
-            if(timer >= timeToAttack)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                timer = 0;
-                attacking = false;
-                attackArea.SetActive(attacking);
+                Attack();
+            }
+
+            if (attacking)
+            {
+                timer += Time.deltaTime;
+
+                if (timer >= timeToAttack)
+                {
+                    timer = 0;
+                    attacking = false;
+                    attackArea.SetActive(attacking);
+                }
             }
         }
     }
