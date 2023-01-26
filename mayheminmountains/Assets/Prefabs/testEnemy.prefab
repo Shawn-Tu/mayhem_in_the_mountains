@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 4358479809221547879}
   - component: {fileID: 4358479809221547875}
   - component: {fileID: 4358479809221547872}
+  - component: {fileID: 4358479807926727480}
   m_Layer: 0
   m_Name: testEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b155ad2698dfc74fac579b802f8fef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 400
 --- !u!61 &4358479809221547879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,3 +182,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   damage: 2
+--- !u!114 &4358479807926727480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358479809221547882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4d42c5f1fb37347ad3cb6d52f2f913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

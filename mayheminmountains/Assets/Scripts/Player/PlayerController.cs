@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     private GameObject attackArea = default;
 
-
     bool flippedX = true;
     bool flippedY = true;
 
@@ -33,11 +32,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         //movement
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
-
-
 
         //calls flip function
         if (movement.x > 0 && !flippedX)
