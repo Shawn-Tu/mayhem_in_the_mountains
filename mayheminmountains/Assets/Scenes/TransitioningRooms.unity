@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4505631941779311247, guid: 9714eeeec43c41e4fb11beeab7fa18f1, type: 3}
   bulletPos: {fileID: 324078797}
+  bulletDistance: 6
 --- !u!61 &160587810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -358,8 +359,8 @@ MonoBehaviour:
   speed: 3
   distanceBT: 4
   rb: {fileID: 160587816}
-  range: 3
-  maxDistance: 3
+  range: 1
+  maxDistance: 4
 --- !u!50 &160587816
 Rigidbody2D:
   serializedVersion: 4
