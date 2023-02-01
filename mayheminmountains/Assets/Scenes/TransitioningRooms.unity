@@ -197,9 +197,9 @@ GameObject:
   - component: {fileID: 160587810}
   - component: {fileID: 160587816}
   - component: {fileID: 160587809}
-  - component: {fileID: 160587815}
   - component: {fileID: 160587814}
   - component: {fileID: 160587813}
+  - component: {fileID: 160587817}
   m_Layer: 0
   m_Name: testEnemyShoot
   m_TagString: Untagged
@@ -343,24 +343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 394709469}
   damage: 2
---- !u!114 &160587815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160587808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865768a3738f474488def99cd96f6e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1649747298}
-  speed: 3
-  distanceBT: 4
-  rb: {fileID: 160587816}
-  range: 1
-  maxDistance: 4
 --- !u!50 &160587816
 Rigidbody2D:
   serializedVersion: 4
@@ -382,6 +364,26 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &160587817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160587808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088a6fba0e47d0049936486dace2c750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  stopDistance: 20
+  fallbackDistance: 10
+  distanceBT: 6
+  range: 4
+  maxDistance: 10
+  player1: {fileID: 752607598}
+  player: {fileID: 1649747298}
 --- !u!1 &324078796
 GameObject:
   m_ObjectHideFlags: 0
