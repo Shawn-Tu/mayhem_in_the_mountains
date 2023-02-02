@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 160587814}
   - component: {fileID: 160587813}
   - component: {fileID: 160587817}
+  - component: {fileID: 160587818}
   m_Layer: 0
   m_Name: testEnemyShoot
   m_TagString: Untagged
@@ -379,11 +380,30 @@ MonoBehaviour:
   speed: 2
   stopDistance: 20
   fallbackDistance: 10
-  distanceBT: 6
+  distanceBT: 5
+  rb: {fileID: 160587816}
   range: 4
   maxDistance: 10
   player1: {fileID: 752607598}
   player: {fileID: 1649747298}
+--- !u!114 &160587818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160587808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4d42c5f1fb37347ad3cb6d52f2f913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Contact: 0
+  difference: {x: 0, y: 0}
+  divide: 4
+  count: 10
+  differenceX: 0
+  differenceY: 0
 --- !u!1 &324078796
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +513,10 @@ PrefabInstance:
     - target: {fileID: 6269605066579087757, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_Name
       value: PlayerObjects
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269605066792719865, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_TagString
+      value: Damage
       objectReference: {fileID: 0}
     - target: {fileID: 6269605067103949506, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_BoundingShape2D
@@ -984,7 +1008,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1649747298 stripped
 GameObject:
@@ -6164,7 +6188,7 @@ PrefabInstance:
       objectReference: {fileID: 752607598}
     - target: {fileID: 8438271692917828716, guid: 24098a9241baf934c86b28eba4f398d9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8438271692917828716, guid: 24098a9241baf934c86b28eba4f398d9, type: 3}
       propertyPath: m_LocalPosition.x

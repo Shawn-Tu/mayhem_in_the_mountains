@@ -10,6 +10,7 @@ public class ProjectileEnemy : MonoBehaviour
     public float stopDistance;
     public float fallbackDistance;
     public float distanceBT;
+    public Rigidbody2D rb;
 
     [SerializeField] float range;
     [SerializeField] float maxDistance;
@@ -30,14 +31,7 @@ public class ProjectileEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player1.position) > stopDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player1.position, speed * Time.deltaTime);
-        } 
-        else if (Vector2.Distance(transform.position, player1.position) < stopDistance && Vector2.Distance(transform.position, player1.position) > fallbackDistance)
-        {
-            transform.position = this.transform.position;
-        }
+        rb.velocity = Vector3.zero;
 
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
@@ -45,7 +39,29 @@ public class ProjectileEnemy : MonoBehaviour
         {
             Roam();
         }
+
+        if (distance < distanceBT)
+        {
+            Shoot();
+        }
     }
+
+    void Shoot()
+    {
+        if (Vector2.Distance(transform.position, player1.position) > stopDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player1.position, speed * Time.deltaTime);
+        }
+        else if (Vector2.Distance(transform.position, player1.position) < stopDistance && Vector2.Distance(transform.position, player1.position) > fallbackDistance)
+        {
+            transform.position = this.transform.position;
+        }
+        else if (Vector2.Distance(transform.position, player1.position) < fallbackDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player1.position, -speed * Time.deltaTime);
+        }
+    }
+
 
     void Roam()
     {
