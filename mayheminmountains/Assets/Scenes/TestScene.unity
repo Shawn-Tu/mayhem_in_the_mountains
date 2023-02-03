@@ -9462,7 +9462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 389862397}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1928711943693887684, guid: ba49e0896b498504eabf8efb0fdd7407, type: 3}
 --- !u!1001 &1994424032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9758,7 +9758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014347150599236284, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.068
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2014347150599236284, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_LocalPosition.y
