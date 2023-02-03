@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 5f;
     public Rigidbody2D rb;
+    public PlayerShoot weapon;
+
     private GameObject attackArea = default;
 
     bool flippedX = true;
