@@ -123,17 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &421583752 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 555280519782896104, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+--- !u!4 &389862397 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2014347150599236284, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
   m_PrefabInstance: {fileID: 6269605067025842702}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72722a9f8c28c8d42a01e2c3582cedb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9455,7 +9449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca7c4996eec0e44292eaf3761911601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1928314050
+--- !u!114 &1928314057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9464,9 +9458,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1781358357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be7d2271fc07d164b8b00c582bc2a54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3afaba2b0af482443a101e81623287a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingPoint: {fileID: 389862397}
+  bulletPrefab: {fileID: 0}
 --- !u!1001 &1994424032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9748,6 +9744,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 74480078358651843, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_Name
+      value: BulletPosition
+      objectReference: {fileID: 0}
     - target: {fileID: 555280519737973628, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9756,21 +9756,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 555280520359197836, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 421583752}
-    - target: {fileID: 555280520359197836, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BackToMainMenu
+    - target: {fileID: 2014347150599236284, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.068
       objectReference: {fileID: 0}
-    - target: {fileID: 555280520359197836, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 555280520359197836, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 2014347150599236284, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.582
       objectReference: {fileID: 0}
     - target: {fileID: 6269605066579087754, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_RootOrder
@@ -9821,8 +9813,8 @@ PrefabInstance:
       value: PlayerObjects
       objectReference: {fileID: 0}
     - target: {fileID: 6269605066792719865, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
-      propertyPath: m_TagString
-      value: Damage
+      propertyPath: m_Name
+      value: SwordHitbox
       objectReference: {fileID: 0}
     - target: {fileID: 6269605067103949506, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_BoundingShape2D

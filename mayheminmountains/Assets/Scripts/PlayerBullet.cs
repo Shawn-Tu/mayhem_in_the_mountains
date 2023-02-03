@@ -4,14 +4,41 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float speed;
+    private Rigidbody2D rb;
+
+    Vector2 movement;
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        if (movement.y > 0)
+        {
+            rb.velocity = transform.up * speed;
+        }
+        if (movement.y < 0)
+        {
+            rb.velocity = -transform.up * speed;
+        }
+
+        if (movement.x > 0)
+        {
+            rb.velocity = transform.right * speed;
+        }
+        if (movement.x < 0)
+        {
+            rb.velocity = -transform.right * speed;
+        }
+        //rb.velocity = transform.right * speed;
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        
+
+    }
+
+    private void FixedUpdate()
     {
         
     }

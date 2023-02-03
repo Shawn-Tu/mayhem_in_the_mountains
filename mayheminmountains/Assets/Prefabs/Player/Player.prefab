@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7350986482381454042}
+  m_Father: {fileID: 3095531892414213843}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3095531890881955217
@@ -95,6 +95,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3095531890881955216}
   - {fileID: 7350986482381454042}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -186,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6
   rb: {fileID: 3095531892414213841}
+  weapon: {fileID: 0}
 --- !u!61 &3095531892414213844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,8 +253,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3095531890881955216}
+  m_Children: []
   m_Father: {fileID: 3095531892414213843}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
