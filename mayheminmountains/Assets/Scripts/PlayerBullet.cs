@@ -6,31 +6,56 @@ public class PlayerBullet : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rb;
+    private GameObject player;
 
-    Vector2 movement;
+    //Vector2 movement;
 
     private void Awake()
     {
+        player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
-        if (movement.y > 0)
+        //rb.velocity = transform.right * speed;
+        Vector3 currentScale = player.transform.localScale;
+
+        if (Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.D))
         {
-            rb.velocity = transform.up * speed;
+            LeftRightShoot();
         }
-        if (movement.y < 0)
+        if (Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.S))
         {
-            rb.velocity = -transform.up * speed;
+            UpDownShoot();
         }
 
-        if (movement.x > 0)
+    }
+
+    //shoot left or right
+    public void LeftRightShoot()
+    {
+        Vector3 currentScale = player.transform.localScale;
+        if (currentScale.x == -1)
+        {
+            rb.velocity = transform.right * -1 * speed;
+        }
+        else if (currentScale.x == 1)
         {
             rb.velocity = transform.right * speed;
         }
-        if (movement.x < 0)
-        {
-            rb.velocity = -transform.right * speed;
-        }
-        //rb.velocity = transform.right * speed;
     }
+    //shoot up or down
+    public void UpDownShoot()
+    {
+        Vector3 currentScale = player.transform.localScale;
+        if (currentScale.y == -1)
+        {
+            rb.velocity = transform.up * -1 * speed;
+        }
+        else if (currentScale.y == 1)
+        {
+            rb.velocity = transform.up * speed;
+        }
+    }
+
+
 
     void Update()
     {

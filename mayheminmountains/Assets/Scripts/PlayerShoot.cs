@@ -20,6 +20,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);        }
+            Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);        
+        }
     }
 }
