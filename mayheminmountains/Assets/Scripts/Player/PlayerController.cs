@@ -11,9 +11,13 @@ public class PlayerController : MonoBehaviour
     public PlayerShoot weapon;
 
     private GameObject attackArea = default;
+    public GameObject aimArea;
 
     bool flippedX = true;
     bool flippedY = true;
+
+    //Vector2 moveDirection;
+    Vector2 aimPosition;
 
     void Start()
     {
@@ -29,6 +33,15 @@ public class PlayerController : MonoBehaviour
         //input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    weapon.Fire();
+        //}
+
+        //aimPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        
 
     }
 
@@ -55,7 +68,8 @@ public class PlayerController : MonoBehaviour
             FlipY();
         }
 
-
+        //Vector2 aimDirection = aimPosition - rb.position;
+        // aimAngle = Mathf.Atan2(aimPosition.y, aimPosition.x) * Mathf.Rad2Deg - 90f;
     }
 
 

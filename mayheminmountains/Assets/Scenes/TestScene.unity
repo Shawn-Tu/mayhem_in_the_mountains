@@ -9449,7 +9449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca7c4996eec0e44292eaf3761911601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1928314057
+--- !u!114 &1928314050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9463,6 +9463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 389862397}
   bulletPrefab: {fileID: 1928711943693887684, guid: ba49e0896b498504eabf8efb0fdd7407, type: 3}
+  fireForce: 20
 --- !u!1001 &1994424032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9746,7 +9747,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 74480078358651843, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_Name
-      value: BulletPosition
+      value: RangedWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 74480078358651843, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 555280519737973628, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9847,6 +9852,14 @@ PrefabInstance:
     - target: {fileID: 6269605067276369589, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269605067276369590, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269605067276369590, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: aimArea
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}

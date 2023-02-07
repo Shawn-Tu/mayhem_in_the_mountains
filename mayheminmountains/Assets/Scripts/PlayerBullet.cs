@@ -10,22 +10,36 @@ public class PlayerBullet : MonoBehaviour
 
     //Vector2 movement;
 
+    bool upDown;
+    bool leftRight;
+
+    
     private void Awake()
     {
         player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
-        //rb.velocity = transform.right * speed;
         Vector3 currentScale = player.transform.localScale;
 
         if (Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.D))
         {
+            upDown = false;
+            leftRight = true;
             LeftRightShoot();
         }
         if (Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.S))
         {
+            upDown = true;
+            leftRight = false;
             UpDownShoot();
         }
-
+        if(upDown == false && leftRight == true)
+        {
+            LeftRightShoot();
+        }
+        if(upDown == true && leftRight == false)
+        {
+            UpDownShoot();
+        }
     }
 
     //shoot left or right
@@ -44,6 +58,7 @@ public class PlayerBullet : MonoBehaviour
     //shoot up or down
     public void UpDownShoot()
     {
+        
         Vector3 currentScale = player.transform.localScale;
         if (currentScale.y == -1)
         {
@@ -55,16 +70,5 @@ public class PlayerBullet : MonoBehaviour
         }
     }
 
-
-
-    void Update()
-    {
-        
-
-    }
-
-    private void FixedUpdate()
-    {
-        
-    }
+    
 }

@@ -7,8 +7,14 @@ public class PlayerShoot : MonoBehaviour
 {
     public Transform shootingPoint;
     public GameObject bulletPrefab;
-    //public float bulletSpeed = 10;
+    public float fireForce = 20;
     
+    //public void Fire()
+    //{
+    //    GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
+    //    bullet.GetComponent<Rigidbody2D>().AddForce(shootingPoint.up * fireForce, ForceMode2D.Impulse);
+    //}
+
     // Start is called before the first frame update
     void Start()
     {
