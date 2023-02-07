@@ -8,6 +8,8 @@ public class PlayerShoot : MonoBehaviour
     public Transform shootingPoint;
     public GameObject bulletPrefab;
     public float fireForce = 20;
+
+    PlayerBullet playerBullet;
     
     //public void Fire()
     //{
@@ -28,5 +30,6 @@ public class PlayerShoot : MonoBehaviour
         {
             Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);        
         }
+
     }
 }
