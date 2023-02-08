@@ -200,15 +200,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2789214225509524937, guid: e668d03b11bfb6244921ac6e8831bbc3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.58
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 2789214225509524937, guid: e668d03b11bfb6244921ac6e8831bbc3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 2789214225509524937, guid: e668d03b11bfb6244921ac6e8831bbc3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.089443
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2789214225509524937, guid: e668d03b11bfb6244921ac6e8831bbc3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -273,6 +273,10 @@ PrefabInstance:
       value: 0.1881814
       objectReference: {fileID: 0}
     - target: {fileID: 3095531890881955231, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+      propertyPath: m_Name
+      value: SwordHitbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095531890881955231, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -294,15 +298,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3095531892414213843, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.58
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 3095531892414213843, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 3095531892414213843, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.089443
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3095531892414213843, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -340,8 +344,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7350986482381454042, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006933658923955109, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+      propertyPath: m_Name
+      value: RangedWeapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+--- !u!4 &2014347150599236284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7350986482381454042, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+  m_PrefabInstance: {fileID: 9076887734932656230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6269605067276369589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3095531892414213843, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
@@ -378,3 +395,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+--- !u!114 &1928314058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269605067276369593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52694674a5bf24449a05ed18c74c3a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePos: {fileID: 2014347150599236284}
+  bulletPrefab: {fileID: 1928711943693887684, guid: ba49e0896b498504eabf8efb0fdd7407, type: 3}

@@ -8,21 +8,19 @@ public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 5f;
     public Rigidbody2D rb;
-    public PlayerShoot weapon;
 
-    private GameObject attackArea = default;
-    public GameObject aimArea;
 
-    bool flippedX = true;
-    bool flippedY = true;
+    //private GameObject attackArea = default;
+    //private GameObject aimArea = default;
 
-    //Vector2 moveDirection;
-    Vector2 aimPosition;
+    //bool flippedX = true;
+    //bool flippedY = true;
 
     void Start()
     {
         //grabs child object of character
-        attackArea = transform.GetChild(0).gameObject;
+        //attackArea = transform.GetChild(0).gameObject;
+        //aimArea = transform.GetChild(1).gameObject;
     }
 
     Vector2 movement;
@@ -33,16 +31,6 @@ public class PlayerController : MonoBehaviour
         //input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    weapon.Fire();
-        //}
-
-        //aimPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        
-
     }
 
     void FixedUpdate()
@@ -50,50 +38,67 @@ public class PlayerController : MonoBehaviour
         //movement
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
 
-        //calls flip function
-        if (movement.x > 0 && !flippedX)
+        if (Input.GetKey(KeyCode.W))
         {
-            FlipX();
+            transform.rotation = Quaternion.Euler(movement.x, movement.y, 0f);
         }
-        if (movement.x < 0 && flippedX)
+        if (Input.GetKey(KeyCode.A))
         {
-            FlipX();
+            transform.rotation = Quaternion.Euler(movement.x, movement.y, 90f);
         }
-        if (movement.y > 0 && !flippedY)
+        if (Input.GetKey(KeyCode.S))
         {
-            FlipY();
+            transform.rotation = Quaternion.Euler(movement.x, movement.y, 180f);
         }
-        if (movement.y < 0 && flippedY)
+        if (Input.GetKey(KeyCode.D))
         {
-            FlipY();
+            transform.rotation = Quaternion.Euler(movement.x, movement.y, 270f);
         }
 
-        //Vector2 aimDirection = aimPosition - rb.position;
-        // aimAngle = Mathf.Atan2(aimPosition.y, aimPosition.x) * Mathf.Rad2Deg - 90f;
+        //calls flip function
+        //if (movement.x > 0 && !flippedX)
+        //{
+        //    FlipX();
+        //}
+        //if (movement.x < 0 && flippedX)
+        //{
+        //    FlipX();
+        //}
+        //if (movement.y > 0 && !flippedY)
+        //{
+        //    FlipY();
+        //}
+        //if (movement.y < 0 && flippedY)
+        //{
+        //    FlipY();
+        //}
     }
 
 
     //flips character, moves sword hitbox left or right
-    void FlipX()
-    {
-        attackArea.transform.localPosition = new Vector2(0.5f, 0);
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
-
-        flippedX = !flippedX;
-    }
+    //void FlipX()
+    //{
+    //    attackArea.transform.localPosition = new Vector2(0.5f, 0);
+    //    aimArea.transform.localPosition = new Vector2(0.5f, 0);
+    //    Vector3 currentScale = gameObject.transform.localScale;
+    //    currentScale.x *= -1;
+    //    gameObject.transform.localScale = currentScale;
+    //
+    //
+    //    flippedX = !flippedX;
+    //}
 
 
     //move sword hitbox to up or down
-    void FlipY()
-    {
-        attackArea.transform.localPosition = new Vector2(0, 0.5f);
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.y *= -1;
-        gameObject.transform.localScale = currentScale;
-
-        flippedY = !flippedY;
-    }
+    //void FlipY()
+    //{
+    //    attackArea.transform.localPosition = new Vector2(0, 0.5f);
+    //    aimArea.transform.localPosition = new Vector2(0.5f, 0);
+    //    Vector3 currentScale = gameObject.transform.localScale;
+    //    currentScale.y *= -1;
+    //    gameObject.transform.localScale = currentScale;
+    //
+    //    flippedY = !flippedY;
+    //}
 
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1265987990758637792}
   - component: {fileID: 5965805700711023082}
   - component: {fileID: 1286583464970959187}
-  - component: {fileID: -7749146399930858792}
+  - component: {fileID: 4141131332704970845}
   m_Layer: 0
   m_Name: tempPrefabBullet
   m_TagString: Untagged
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-7749146399930858792
+--- !u!114 &4141131332704970845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928711943693887684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4562b416e41682e4fb51759c418d51ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c04bf7382a09a8458bc9de9b50eca8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  projectileSpeed: 10
+  rb: {fileID: 5965805700711023082}
