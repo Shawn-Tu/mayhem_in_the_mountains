@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public Transform weaponSlot;
+    public GameObject activeWeapon;
+
+    void Start()
     {
-        PlayerManager manager = other.GetComponent<PlayerManager>();
-        if (manager)
-        {
-            manager.PickupItem(gameObject);
-        }
+        var weapon = Instantiate(activeWeapon, weaponSlot.transform.position, weaponSlot.transform.rotation);
+        weapon.transform.parent = weaponSlot.transform;
+    }
+
+    public void UpdateWeapon(GameObject newWeapon)
+    {
+        activeWeapon = newWeapon;
+
+        var weapon = Instantiate(activeWeapon, weaponSlot.transform.position, weaponSlot.transform.rotation);
+        weapon.transform.parent = weaponSlot.transform;
     }
 }

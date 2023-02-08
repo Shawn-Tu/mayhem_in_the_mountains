@@ -7,6 +7,9 @@ public class PlayerFire : MonoBehaviour
     public Transform firePos;
     public GameObject bulletPrefab;
     public int currentAmmo, maxAmmo = 30, plusAmmo = 3;
+    public float fireRate;
+    float nextFire;
+
 
     Vector3 bulletPos;
 
@@ -22,11 +25,16 @@ public class PlayerFire : MonoBehaviour
 
     void Shoot()
     {
-        if(currentAmmo > 0)
+        if(Time.time > nextFire)
         {
-            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-            currentAmmo--;
+            nextFire = Time.time + fireRate;
+            if (currentAmmo > 0)
+            {
+                Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+                currentAmmo--;
+            }
         }
+        
     }
 
     public void AddAmmo (int ammoAmount)

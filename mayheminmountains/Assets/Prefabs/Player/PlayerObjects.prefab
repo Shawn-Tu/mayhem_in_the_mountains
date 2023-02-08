@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &74480078358651843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9006933658923955109, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+  m_PrefabInstance: {fileID: 9076887734932656230}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014347150599236284}
+  m_Layer: 0
+  m_Name: RangedWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &6269605066579087757
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,20 +397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7d2271fc07d164b8b00c582bc2a54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6269605067276369615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6269605067276369593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca7c4996eec0e44292eaf3761911601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
 --- !u!114 &1928314058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,3 +411,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePos: {fileID: 2014347150599236284}
   bulletPrefab: {fileID: 1928711943693887684, guid: ba49e0896b498504eabf8efb0fdd7407, type: 3}
+  currentAmmo: 0
+  maxAmmo: 30
+  plusAmmo: 3
+  fireRate: 0
+--- !u!114 &6269605067276369615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269605067276369593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca7c4996eec0e44292eaf3761911601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 10
