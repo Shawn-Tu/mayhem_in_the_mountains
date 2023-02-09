@@ -10,7 +10,6 @@ public class PlayerFire : MonoBehaviour
     public float fireRate;
     float nextFire;
 
-
     Vector3 bulletPos;
 
     // Update is called once per frame
