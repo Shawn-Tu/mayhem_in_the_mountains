@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class PickupRanged : MonoBehaviour
 {
-    public GameObject fireWeapon = default;
+    //public GameObject fireWeapon = default;
+
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject rangeChild;
 
     private void Start()
     {
-        fireWeapon = transform.GetChild(1).gameObject;
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GameObject.FindGameObjectWithTag("Equipment"))
-        {
-            if (fireWeapon.activeInHierarchy == false)
-            {
-                fireWeapon.SetActive(true);
-            }
-            else
-            {
-                fireWeapon.SetActive(false);
-            }
-        }
+        Debug.Log("work?");
+        rangeChild.SetActive(true);
+        Destroy(gameObject);
     }
 }
