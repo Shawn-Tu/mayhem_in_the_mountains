@@ -24,16 +24,18 @@ public class PlayerFire : MonoBehaviour
 
     void Shoot()
     {
-        if(Time.time > nextFire)
+        if (!PauseMenu.isPaused)
         {
-            nextFire = Time.time + fireRate;
-            if (currentAmmo > 0)
+            if (Time.time > nextFire)
             {
-                Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-                currentAmmo--;
+                nextFire = Time.time + fireRate;
+                if (currentAmmo > 0)
+                {
+                    Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+                    currentAmmo--;
+                }
             }
         }
-        
     }
 
     public void AddAmmo (int ammoAmount)

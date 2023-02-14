@@ -9690,7 +9690,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1406914916, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: fireRate
-      value: 10
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 555280519531672378, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 555280519531672378, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 555280519531672378, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 555280519737973628, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_AnchorMax.x
