@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
-            //player dies
+            //player get more health
             Debug.Log("Power!");
         }
     }

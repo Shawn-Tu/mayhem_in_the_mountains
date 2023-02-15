@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public void PickupItem(GameObject obj)
-    {
+    public float numOfKeys = 0;
 
-    }
+
 
 }
