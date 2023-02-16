@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 100;
+    public GameObject healthPrefab;
 
     // Update is called once per frame
 
@@ -27,9 +28,13 @@ public class Health : MonoBehaviour
     }
     private void Die()
     {
+        int chance = Random.Range(0, 10);
+        //spawn health
+        if(chance <= 4)
+        {
+            Instantiate(healthPrefab, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
         Debug.Log("death");
     }
-
-
 }
