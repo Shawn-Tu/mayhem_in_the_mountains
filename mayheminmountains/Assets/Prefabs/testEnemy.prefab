@@ -122,6 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 12
   healthPrefab: {fileID: 2919425935777767371, guid: 423ce19549f4af94799df2c34af37d34, type: 3}
+  currencyPrefab: {fileID: 8799858020745954517, guid: e3d222e21e58a82489570220e45f0d63, type: 3}
+  ammoPrefab: {fileID: 7202964951617343279, guid: d6cb864ecd0993544be3eea0c1952bcb, type: 3}
 --- !u!61 &4358479809221547879
 BoxCollider2D:
   m_ObjectHideFlags: 0
