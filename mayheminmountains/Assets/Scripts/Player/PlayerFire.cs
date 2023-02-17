@@ -2,6 +2,8 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerFire : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class PlayerFire : MonoBehaviour
         {
             Shoot();
         }
+
     }
 
     void Shoot()
