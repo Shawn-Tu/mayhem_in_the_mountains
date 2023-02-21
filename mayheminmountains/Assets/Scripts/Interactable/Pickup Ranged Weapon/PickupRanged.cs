@@ -9,6 +9,9 @@ public class PickupRanged : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject rangeChild;
 
+    [SerializeField] GameObject hudElement;
+    [SerializeField] GameObject ammoCounter;
+
     private void Start()
     {
 
@@ -18,6 +21,7 @@ public class PickupRanged : MonoBehaviour
     {
         Debug.Log("work?");
         rangeChild.SetActive(true);
+        ammoCounter.SetActive(true);
         Destroy(gameObject);
     }
 }

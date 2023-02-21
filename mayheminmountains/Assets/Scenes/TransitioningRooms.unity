@@ -193,11 +193,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 555280519737973628, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 555280519737973628, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6269605066579087754, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_RootOrder
@@ -247,23 +247,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 6269605066579087757, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6269605067103949506, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1248288709}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
---- !u!114 &394709469 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6269605067276369615, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
-  m_PrefabInstance: {fileID: 394709468}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649747298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca7c4996eec0e44292eaf3761911601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &612984315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6016,7 +6009,7 @@ PrefabInstance:
     - target: {fileID: 3711130899048073562, guid: c469ace03e6ee304aa4bd723501f437c, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 394709469}
+      objectReference: {fileID: 0}
     - target: {fileID: 3711130899048073564, guid: c469ace03e6ee304aa4bd723501f437c, type: 3}
       propertyPath: m_Name
       value: testEnemyShoot
