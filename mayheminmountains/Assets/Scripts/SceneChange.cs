@@ -6,21 +6,14 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public int sceneBuildIndex;
+    public bool isNextScene = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    public SceneInfo sceneInfo;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        sceneInfo.isNextScene = isNextScene;
         print("Trigger Entered");
 
         if(col.tag == "Player")
