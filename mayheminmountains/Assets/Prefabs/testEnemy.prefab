@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 1
+  speed: 2
   distanceBT: 4
   rb: {fileID: 4358479809221547875}
   range: 1
