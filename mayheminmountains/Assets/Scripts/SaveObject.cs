@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class SaveObject : MonoBehaviour
 {
-    private static SaveObject saveObject;
+    //private static SaveObject saveObject;
+    public static SaveObject Instance;
 
-    private void Awake()
+    private void Start()
     {
-        if(saveObject == null)
+        if(Instance != null)
         {
-            saveObject = this;
-            DontDestroyOnLoad(saveObject);
+            Destroy(this.gameObject);
+            return;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
+        Instance = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
     }
 }

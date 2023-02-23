@@ -17,11 +17,14 @@ public class PickupRanged : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("work?");
-        rangeChild.SetActive(true);
-        ammoCounter.SetActive(true);
-        Destroy(gameObject);
+        if(col.gameObject.tag == "Player")
+        {
+            Debug.Log("work?");
+            rangeChild.SetActive(true);
+            ammoCounter.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 }
