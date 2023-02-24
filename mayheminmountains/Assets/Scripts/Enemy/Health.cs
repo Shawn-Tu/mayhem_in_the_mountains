@@ -7,9 +7,9 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 100;
-    public GameObject healthPrefab;
-    public GameObject currencyPrefab;
-    public GameObject ammoPrefab;
+    public GameObject healthPrefab, currencyPrefab, ammoPrefab, bombPrefab;
+    //public GameObject currencyPrefab;
+    //public GameObject ammoPrefab;
 
     // Update is called once per frame
 
@@ -40,9 +40,13 @@ public class Health : MonoBehaviour
         {
             Instantiate(currencyPrefab, transform.position, Quaternion.identity);
         }
-        else if(chance >= 8)
+        else if(chance >= 8 & chance < 10)
         {
             Instantiate(ammoPrefab, transform.position, Quaternion.identity);
+        }
+        else if(chance == 11)
+        {
+            Instantiate(bombPrefab, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
         Debug.Log("death");

@@ -5,12 +5,19 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     float currentTime;
+
     public float startingTime = 10f;
-    public Collider2D bombRad;
+    //public Collider2D bombRad;
+    public float playerDamage = 10;
+
+    private GameObject radius = default;
+
+    BombDamage bombDamage;
 
     private void Start()
     {
-        bombRad.enabled = false;
+        radius = transform.GetChild(0).gameObject;
+        //bombRad.enabled = false;
         currentTime = startingTime;
     }
 
@@ -20,18 +27,16 @@ public class Bomb : MonoBehaviour
 
         if(currentTime <= 0)
         {
+            Explosion();
             Debug.Log("BOOM!!!");
             currentTime = 0;
-            bombRad.enabled = true;
-            Destroy(gameObject);
+            //bombRad.enabled = true;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+
+    void Explosion()
     {
-        if(col.gameObject.tag == "Player")
-        {
-            Debug.Log("BRO U DEAD");
-        }
+        radius.SetActive(true);
     }
 }
