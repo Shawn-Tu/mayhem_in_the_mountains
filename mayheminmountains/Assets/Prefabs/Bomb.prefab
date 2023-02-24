@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 374590142088683229}
   - component: {fileID: 4319810224407546687}
   - component: {fileID: -7622601933026462480}
+  - component: {fileID: 8416270257593602488}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Bomb
@@ -164,3 +165,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingTime: 2
   playerDamage: 1
+--- !u!58 &8416270257593602488
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678981759368473441}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5

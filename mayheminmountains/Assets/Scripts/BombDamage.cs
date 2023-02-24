@@ -23,5 +23,14 @@ public class BombDamage : MonoBehaviour
             health.Damage(enemyDamage);
             Destroy(parent);
         }
+        else if(col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
+        {
+            Nothing();
+        }
+    }
+
+    void Nothing()
+    {
+        Destroy(parent);
     }
 }

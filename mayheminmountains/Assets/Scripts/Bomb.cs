@@ -7,17 +7,17 @@ public class Bomb : MonoBehaviour
     float currentTime;
 
     public float startingTime = 10f;
-    //public Collider2D bombRad;
     public float playerDamage = 10;
 
     private GameObject radius = default;
 
     BombDamage bombDamage;
 
+    bool entityCheck = false;
+
     private void Start()
     {
         radius = transform.GetChild(0).gameObject;
-        //bombRad.enabled = false;
         currentTime = startingTime;
     }
 
@@ -27,10 +27,17 @@ public class Bomb : MonoBehaviour
 
         if(currentTime <= 0)
         {
-            Explosion();
-            Debug.Log("BOOM!!!");
             currentTime = 0;
-            //bombRad.enabled = true;
+            if (entityCheck == false)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Explosion();
+
+            }
+            Debug.Log("BOOM!!!");
         }
     }
 
@@ -38,5 +45,18 @@ public class Bomb : MonoBehaviour
     void Explosion()
     {
         radius.SetActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.GetComponent<PlayerHealth>() != null | col.GetComponent<Health>() != null)
+        {
+            entityCheck = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        entityCheck = false;
     }
 }
