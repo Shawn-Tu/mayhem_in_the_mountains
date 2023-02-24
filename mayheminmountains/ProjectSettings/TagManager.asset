@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Equipment
   - Bomb
+  - Floor
   layers:
   - Default
   - TransparentFX
