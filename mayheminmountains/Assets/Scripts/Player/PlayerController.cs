@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        boxCollider.transform.rotation = Quaternion.identity;
+        boxCollider.transform.position = transform.position;
 
         //movement
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
