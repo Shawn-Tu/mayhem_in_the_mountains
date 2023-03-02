@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 5f;
     public Rigidbody2D rb;
+    public Collider2D boxCollider;
 
 
     //private GameObject attackArea = default;
@@ -35,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        boxCollider.transform.rotation = Quaternion.identity;
+
         //movement
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
 
@@ -54,51 +57,5 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(movement.x, movement.y, 270f);
         }
-
-        //calls flip function
-        //if (movement.x > 0 && !flippedX)
-        //{
-        //    FlipX();
-        //}
-        //if (movement.x < 0 && flippedX)
-        //{
-        //    FlipX();
-        //}
-        //if (movement.y > 0 && !flippedY)
-        //{
-        //    FlipY();
-        //}
-        //if (movement.y < 0 && flippedY)
-        //{
-        //    FlipY();
-        //}
     }
-
-
-    //flips character, moves sword hitbox left or right
-    //void FlipX()
-    //{
-    //    attackArea.transform.localPosition = new Vector2(0.5f, 0);
-    //    aimArea.transform.localPosition = new Vector2(0.5f, 0);
-    //    Vector3 currentScale = gameObject.transform.localScale;
-    //    currentScale.x *= -1;
-    //    gameObject.transform.localScale = currentScale;
-    //
-    //
-    //    flippedX = !flippedX;
-    //}
-
-
-    //move sword hitbox to up or down
-    //void FlipY()
-    //{
-    //    attackArea.transform.localPosition = new Vector2(0, 0.5f);
-    //    aimArea.transform.localPosition = new Vector2(0.5f, 0);
-    //    Vector3 currentScale = gameObject.transform.localScale;
-    //    currentScale.y *= -1;
-    //    gameObject.transform.localScale = currentScale;
-    //
-    //    flippedY = !flippedY;
-    //}
-
 }
