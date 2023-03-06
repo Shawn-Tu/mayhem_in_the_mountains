@@ -17,13 +17,13 @@ public class BombDamage : MonoBehaviour
             playerHealth.TakeDamage(bombDamage);
             Destroy(parent);
         }
-        else if(col.GetComponent<Health>() != null)
+        if(col.GetComponent<Health>() != null)
         {
             Health health = col.GetComponent<Health>();
             health.Damage(enemyDamage);
             Destroy(parent);
         }
-        else if(col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
+        if(col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
         {
             Nothing();
         }
