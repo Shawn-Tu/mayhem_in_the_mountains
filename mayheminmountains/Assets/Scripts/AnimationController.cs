@@ -5,52 +5,67 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour
 {
     public Animator animator;
+    string currentState;
+    //idle
+    const string PLAYER_IDLE_L = "player_idleLeft";
+    const string PLAYER_IDLE_R = "player_idleRight";
+    const string PLAYER_IDLE_U = "player_idleUp";
+    const string PLAYER_IDLE_D = "player_idleDown";
+
+    const string PLAYER_IDLE = PLAYER_IDLE_U;
+
+    //move
+    const string PLAYER_WALK_L = "player_moveLeft";
+    const string PLAYER_WALK_R = "player_moveRight";
+    const string PLAYER_WALK_U = "player_moveUp";
+    const string PLAYER_WALK_D = "player_moveDown";
+
+    Vector2 movement;
+
+    private void Start()
+    {
+        animator = gameObject.GetComponent<Animator>();
+    }
 
     private void Update()
     {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
         transform.rotation = Quaternion.identity;
+
+        if(movement.x < 0)
+        {
+            changeAnimationState(PLAYER_WALK_L);
+        }
+        else if (movement.x > 0)
+        {
+            changeAnimationState(PLAYER_WALK_R);
+        }
+        else if (movement.y > 0)
+        {
+            changeAnimationState(PLAYER_WALK_U);
+        }
+        else if (movement.y < 0)
+        {
+            changeAnimationState(PLAYER_WALK_D);
+        }
+        else
+        {
+            changeAnimationState(PLAYER_IDLE);
+        }
     }
 
-    private void FixedUpdate()
+    //animation change
+    void changeAnimationState(string newState)
     {
-        //player move up
-        if (Input.GetKey(KeyCode.W))
-        {
-            animator.SetBool("Back", true);
-        }
-        else
-        {
-            animator.SetBool("Back", false);
-        }
+        //no more animation interrupting
+        if (currentState == newState) return;
 
-        //player move left
-        if (Input.GetKey(KeyCode.A))
-        {
-            animator.SetBool("Left", true);
-        }
-        else
-        {
-            animator.SetBool("Left", false);
-        }
+        //New animation is to be played
+        animator.Play(newState);
 
-        //player move down
-        if (Input.GetKey(KeyCode.S))
-        {
-            animator.SetBool("Forward", true);
-        }
-        else
-        {
-            animator.SetBool("Forward", false);
-        }
-
-        //player move right
-        if (Input.GetKey(KeyCode.D))
-        {
-            animator.SetBool("Right", true);
-        }
-        else
-        {
-            animator.SetBool("Right", false);
-        }
+        //update state
+        currentState = newState;
     }
 }
