@@ -10,18 +10,12 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D boxCollider;
 
-
-    //private GameObject attackArea = default;
-    //private GameObject aimArea = default;
-
-    //bool flippedX = true;
-    //bool flippedY = true;
+    //bool stops player when attacking
+    public bool stop;
 
     void Start()
     {
-        //grabs child object of character
-        //attackArea = transform.GetChild(0).gameObject;
-        //aimArea = transform.GetChild(1).gameObject;
+        
     }
 
     Vector2 movement;
@@ -36,28 +30,31 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //movement
-        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+        if (stop == false)
+        {
+            //movement
+            rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            boxCollider.transform.rotation = Quaternion.identity;
-            transform.rotation = Quaternion.Euler(movement.x, movement.y, 0f);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            boxCollider.transform.rotation = Quaternion.identity;
-            transform.rotation = Quaternion.Euler(movement.x, movement.y, 90f);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            boxCollider.transform.rotation = Quaternion.identity;
-            transform.rotation = Quaternion.Euler(movement.x, movement.y, 180f);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            boxCollider.transform.rotation = Quaternion.identity;
-            transform.rotation = Quaternion.Euler(movement.x, movement.y, 270f);
+            if (Input.GetKey(KeyCode.W))
+            {
+                boxCollider.transform.rotation = Quaternion.identity;
+                transform.rotation = Quaternion.Euler(movement.x, movement.y, 0f);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                boxCollider.transform.rotation = Quaternion.identity;
+                transform.rotation = Quaternion.Euler(movement.x, movement.y, 90f);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                boxCollider.transform.rotation = Quaternion.identity;
+                transform.rotation = Quaternion.Euler(movement.x, movement.y, 180f);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                boxCollider.transform.rotation = Quaternion.identity;
+                transform.rotation = Quaternion.Euler(movement.x, movement.y, 270f);
+            }
         }
     }
 }

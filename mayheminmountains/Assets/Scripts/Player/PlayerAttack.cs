@@ -9,9 +9,8 @@ public class PlayerAttack : MonoBehaviour
     private float timeToAttack = 0.25f;
     private float timer = 0f;
 
-    //public Transform attackLocation;
-    //public float attackRange = -0.5f;
-    //public LayerMask enemies;
+    public PlayerController playerController;
+    public AnimationController animationController;
 
     private void Start()
     {
@@ -26,6 +25,7 @@ public class PlayerAttack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Attack();
+                playerController.stop = true;
             }
 
             if (attacking)
@@ -37,6 +37,7 @@ public class PlayerAttack : MonoBehaviour
                     timer = 0;
                     attacking = false;
                     attackArea.SetActive(attacking);
+                    playerController.stop = false;
                 }
             }
         }
@@ -46,6 +47,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attacking = true;
         attackArea.SetActive(attacking);
+        animationController.attackAnimationState();
     }
-   
+
 }
