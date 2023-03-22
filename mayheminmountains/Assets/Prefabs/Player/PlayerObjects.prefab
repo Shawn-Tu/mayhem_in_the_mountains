@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1402072206}
+  playerController: {fileID: 0}
 --- !u!212 &1402072207
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -455,7 +456,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04356399, y: -0.2427141}
+  m_Offset: {x: -0.033021152, y: -0.38727587}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -466,7 +467,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3776561, y: 0.5145718}
+  m_Size: {x: 0.37647069, y: 0.7584411}
   m_EdgeRadius: 0
 --- !u!1 &2435988309669942477
 GameObject:
@@ -1165,11 +1166,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3095531892414213844, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_Size.x
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3095531892414213844, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_Size.y
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3095531892414213844, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_Enabled
@@ -1187,6 +1188,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6269605067276369593}
+    - target: {fileID: 3095531892414213845, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 6269605067276369590}
+    - target: {fileID: 3095531892414213845, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+      propertyPath: animationController
+      value: 
+      objectReference: {fileID: 1402072205}
     - target: {fileID: 3095531892414213855, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1238,6 +1247,10 @@ MonoBehaviour:
   maxAmmo: 30
   plusAmmo: 3
   fireRate: 5
+  timeToAttack: 0.5
+  timer: 0
+  playerController: {fileID: 6269605067276369590}
+  animationController: {fileID: 1402072205}
 --- !u!61 &6269605067276369586 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3095531892414213844, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
@@ -1248,6 +1261,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3095531892414213843, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
   m_PrefabInstance: {fileID: 9076887734932656230}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6269605067276369590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3095531892414213840, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
+  m_PrefabInstance: {fileID: 9076887734932656230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269605067276369593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88589240baa2efd46b7f643436f11469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6269605067276369593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3095531892414213855, guid: 4cb54bc79cf86c94fbd241acc715adb2, type: 3}
