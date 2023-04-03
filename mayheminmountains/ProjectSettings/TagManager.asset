@@ -9,6 +9,7 @@ TagManager:
   - Equipment
   - Bomb
   - Floor
+  - PlayerManager
   layers:
   - Default
   - TransparentFX
