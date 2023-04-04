@@ -13,6 +13,7 @@ public class PlayerSmallHeal : MonoBehaviour
             var healthComp = col.GetComponent<PlayerHealth>();
             if(healthComp != null)
             {
+                Debug.Log("HEALTH");
                 healthComp.Heal(heal);
                 Destroy(gameObject);
             }

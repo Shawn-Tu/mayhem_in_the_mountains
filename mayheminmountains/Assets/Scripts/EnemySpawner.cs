@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] GameObject player;
     [SerializeField] GameObject parent;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(player.tag == "PlayerManager")
+        if(other.tag == "Player")
         {
             Debug.Log("Enemy Spawn");
-            //parent.SetActive(true);
+            parent.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if(player.tag == "PlayerManager")
+        if(other.tag == "Player")
         {
             Debug.Log("Enemy NO Spawn");
-            //parent.SetActive(false);
+            parent.SetActive(false);
         }
     }
 }
