@@ -107,7 +107,7 @@ MonoBehaviour:
   distanceBT: 4
   rb: {fileID: 4358479809221547875}
   range: 1
-  maxDistance: 4
+  maxDistance: 2
 --- !u!114 &4358479809221547878
 MonoBehaviour:
   m_ObjectHideFlags: 0
