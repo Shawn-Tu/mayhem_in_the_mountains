@@ -10,6 +10,7 @@ TagManager:
   - Bomb
   - Floor
   - PlayerManager
+  - Bombable
   layers:
   - Default
   - TransparentFX

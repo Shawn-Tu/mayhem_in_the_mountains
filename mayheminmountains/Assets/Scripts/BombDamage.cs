@@ -27,6 +27,12 @@ public class BombDamage : MonoBehaviour
         {
             Nothing();
         }
+        if(col.gameObject.tag == "Bombable")
+        {
+            // Destroy the tile 
+            //Destroy(collision.collider.gameObject);
+            Destroy(parent);
+        }
     }
 
     void Nothing()
