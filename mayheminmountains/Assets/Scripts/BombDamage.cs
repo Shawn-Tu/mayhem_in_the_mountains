@@ -23,15 +23,13 @@ public class BombDamage : MonoBehaviour
             health.Damage(enemyDamage);
             Destroy(parent);
         }
+        if(col.gameObject.tag == "Bombable")
+        {
+            Debug.Log("wall go boom?");
+        }
         if(col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
         {
             Nothing();
-        }
-        if(col.gameObject.tag == "Bombable")
-        {
-            // Destroy the tile 
-            //Destroy(collision.collider.gameObject);
-            Destroy(parent);
         }
     }
 
