@@ -49,7 +49,7 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.GetComponent<PlayerHealth>() != null | col.GetComponent<Health>() != null)
+        if (col.GetComponent<PlayerHealth>() != null || col.GetComponent<Health>() != null)
         {
             entityCheck = true;
         }

@@ -11,6 +11,14 @@ public class BombDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.GetComponent<PlayerHealth>() != null)
+        {
+            Debug.Log("player takes a kaboom");
+            PlayerHealth playerHealth = col.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(bombDamage);
+            Destroy(parent);
+        }
+
         if (col.GetComponent<Health>() != null)
         {
             Debug.Log("work now plz?");
@@ -19,25 +27,15 @@ public class BombDamage : MonoBehaviour
             Destroy(parent);
         }
 
-        else if (col.GetComponent<PlayerHealth>() != null)
-        {
-            PlayerHealth playerHealth = col.GetComponent<PlayerHealth>();
-            playerHealth.TakeDamage(bombDamage);
-            Destroy(parent);
-        }
-        else
+        if (col.GetComponent<Health>() == null && col.GetComponent<PlayerHealth>() == null)
         {
             Nothing();
         }
-        
-        //if (col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
-        //{
-        //    Nothing();
-        //}
     }
 
     void Nothing()
     {
+        Debug.Log("Nothing happened lol");
         Destroy(parent);
     }
 }
