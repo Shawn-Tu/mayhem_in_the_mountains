@@ -11,26 +11,29 @@ public class BombDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.GetComponent<PlayerHealth>() != null)
+        if (col.GetComponent<Health>() != null)
+        {
+            Debug.Log("work now plz?");
+            Health health = col.GetComponent<Health>();
+            health.Damage(enemyDamage);
+            Destroy(parent);
+        }
+
+        else if (col.GetComponent<PlayerHealth>() != null)
         {
             PlayerHealth playerHealth = col.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(bombDamage);
             Destroy(parent);
         }
-        if(col.GetComponent<Health>() != null)
-        {
-            Health health = col.GetComponent<Health>();
-            health.Damage(enemyDamage);
-            Destroy(parent);
-        }
-        if(col.gameObject.tag == "Bombable")
-        {
-            Debug.Log("wall go boom?");
-        }
-        if(col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
+        else
         {
             Nothing();
         }
+        
+        //if (col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
+        //{
+        //    Nothing();
+        //}
     }
 
     void Nothing()

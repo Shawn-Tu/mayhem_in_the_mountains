@@ -6,12 +6,14 @@ using UnityEngine.Tilemaps;
 public class DestructTile : MonoBehaviour
 {
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        breakTile = GetComponent<Tilemap>();
+        if (col.tag == "Bombable")
+        {
+            Debug.Log("work or no");
+            //Destroy(col.gameObject);
+        }
     }
 
-    
+
 }

@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
     private void Die()
     {
         int chance = Random.Range(1, 10);
-        //spawn health
+        //spawn 
         if(chance <= 4)
         {
             Instantiate(healthPrefab, transform.position, Quaternion.identity);
