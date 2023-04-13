@@ -19,7 +19,7 @@ public class BombDamage : MonoBehaviour
             Destroy(parent);
         }
 
-        if (col.GetComponent<Health>() != null)
+        if (col.GetComponent<Health>() != null & col.GetComponent<PlayerHealth>() == null)
         {
             Debug.Log("work now plz?");
             Health health = col.GetComponent<Health>();
@@ -27,7 +27,7 @@ public class BombDamage : MonoBehaviour
             Destroy(parent);
         }
 
-        if (col.GetComponent<Health>() == null && col.GetComponent<PlayerHealth>() == null)
+        if (col.GetComponent<Health>() == null & col.GetComponent<PlayerHealth>() == null)
         {
             Nothing();
         }
