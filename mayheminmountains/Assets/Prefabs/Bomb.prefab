@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8826210066436213579}
   - component: {fileID: 5025266926099300325}
-  - component: {fileID: 7011667853488573213}
-  - component: {fileID: 8515660441213929442}
+  - component: {fileID: 2975951943968163012}
   m_Layer: 0
   m_Name: ExplosionRadius
   m_TagString: Untagged
@@ -50,7 +49,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!114 &7011667853488573213
+--- !u!114 &2975951943968163012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,21 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d509a6b197e244bb5b4ee8356f5f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombDamage: 8
-  enemyDamage: 20
-  parent: {fileID: 6678981759368473441}
---- !u!114 &8515660441213929442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771162854546884473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb605cbe0f2b65f44a607282d2555b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  bombDamage: 10
   enemyDamage: 20
   parent: {fileID: 6678981759368473441}
 --- !u!1 &6678981759368473441
@@ -180,6 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingTime: 2
   playerDamage: 1
+  disBtw: 0
+  obj: {fileID: 0}
 --- !u!58 &8416270257593602488
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,4 +182,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 20

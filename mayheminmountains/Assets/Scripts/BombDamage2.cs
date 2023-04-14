@@ -21,7 +21,7 @@ public class BombDamage2 : MonoBehaviour
                     var distance = Vector3.Distance(closestPoint, transform.position);
 
                     var damagePercent = Mathf.InverseLerp(splashRange, 0, distance);
-                    //enemy.Damage(damagePercent * damage);
+                    enemy.Damage((int)(damagePercent * damage));
                 }
             }
         }
