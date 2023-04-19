@@ -11927,9 +11927,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 6269605066792719860, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_Radius
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269605066792719860, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6269605066792719862, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269605066792719862, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6269605066792719862, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -11941,7 +11953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6269605066792719865, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
