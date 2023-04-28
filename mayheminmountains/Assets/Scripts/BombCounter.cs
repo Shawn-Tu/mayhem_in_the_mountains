@@ -11,6 +11,6 @@ public class BombCounter : MonoBehaviour
 
     private void Update()
     {
-        bombCount.text = "Bombs: " + bombSpawner.currentBomb.ToString();
+        bombCount.text = bombSpawner.currentBomb.ToString();
     }
 }

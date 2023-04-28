@@ -11,7 +11,7 @@ public class AmmoCounter : MonoBehaviour
 
     private void Update()
     {
-        ammoCount.text = "Ammo: " + playerFire.currentAmmo.ToString();
+        ammoCount.text = playerFire.currentAmmo.ToString();
     }
 
 }

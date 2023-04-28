@@ -510,7 +510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333999213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.524581, y: -1.0083001, z: -5.910557}
+  m_LocalPosition: {x: 0.5245308, y: -1.0083001, z: -5.910557}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -764,7 +764,7 @@ PrefabInstance:
     - target: {fileID: 1994424036, guid: ffc3e5510ef1d264ea4d8991cde69ce3, type: 3}
       propertyPath: ammoCounter
       value: 
-      objectReference: {fileID: 1085729817}
+      objectReference: {fileID: 1751617733}
     - target: {fileID: 378211972996082532, guid: ffc3e5510ef1d264ea4d8991cde69ce3, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -10884,11 +10884,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8438271692917828716, guid: 24098a9241baf934c86b28eba4f398d9, type: 3}
   m_PrefabInstance: {fileID: 1077916369}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1085729817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2435988309669942477, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
-  m_PrefabInstance: {fileID: 1751617732}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1098304173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4358479809221547880, guid: ebca5e74f14d88443933419b42f42f0d, type: 3}
@@ -12050,6 +12045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+--- !u!1 &1751617733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2957834811883504021, guid: d9d84691dc1b4d649b5b7241f2097704, type: 3}
+  m_PrefabInstance: {fileID: 1751617732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1774344936
 GameObject:
   m_ObjectHideFlags: 0
